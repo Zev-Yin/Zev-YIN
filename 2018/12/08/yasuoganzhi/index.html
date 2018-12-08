@@ -111,7 +111,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片14.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片15.png">
 <meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片16.png">
-<meta property="og:updated_time" content="2018-12-08T09:31:33.190Z">
+<meta property="og:updated_time" content="2018-12-08T09:33:00.889Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="压缩感知原理">
 <meta name="twitter:description" content="压缩感知理论压缩感知  压缩感知理论对信号的采样、压缩发生在同一个步骤，利用信号的稀疏性，以远低于Nyquist 采样率的速率对信号进行非自适应的测量。众所周知，在数学上，要解出几个未知数就要列出几个方程。用信号处理的方式来表述，就是如果要还原一个信号，信号有多大，我们就要至少测量多少数据。但这只是一般规律，用较少的测量数据还原出较多的信息。即求解欠定方程的唯一解，本来这是不可能的事情，但是如果事">
@@ -398,7 +398,7 @@
 <h3 id="压缩感知的流程"><a href="#压缩感知的流程" class="headerlink" title="压缩感知的流程"></a>压缩感知的流程</h3><img src="/2018/12/08/yasuoganzhi/图片3.png">
 <p>即<img src="/2018/12/08/yasuoganzhi/图片4.png">，其中<img src="/2018/12/08/yasuoganzhi/图片5.png"></p>
 <h3 id="稀疏化"><a href="#稀疏化" class="headerlink" title="稀疏化"></a>稀疏化</h3><p>稀疏信号：指信号中大多数系数的值较小（等于或接近0），即非零值的个数很少，共K个，则称该信号的稀疏度为K，即K稀疏。<br><img src="/2018/12/08/yasuoganzhi/图片6.png"><br>信号的稀疏性是压缩感知的基础，但现实中并不是所有信号都是稀疏的，因此对于在时域不稀疏的信号，在压缩前需要将时域信号投影到另一个域上，使其在该投影域内满足稀疏性条件。<br><img src="/2018/12/08/yasuoganzhi/图片7.png"><br><img src="/2018/12/08/yasuoganzhi/图片8.png" title="只有选择合适的基表示信号，才能保证信号在某个域上表现最稀疏，这是保证信号以高概率重构的前提"><br>常见的稀疏变换：①离散傅立叶变换基、②离散余弦变换基、③离散正弦变换基、④小波矩阵、⑤冗余字典等</p>
-<h3 id="观测"><a href="#观测" class="headerlink" title="观测"></a>观测</h3><p>观测：通过将原信号X与测量矩阵相乘，就可以完成对信号采样，获得采样后的数据，这个过程称为观测，即压缩采样。<br><img src="/2018/12/08/yasuoganzhi/图片9.png"><br>测量矩阵关系到压缩效率，也直接关系到信号能否被精确重构。理想的测量矩阵具有如下要求：<br>①使测量矩阵与稀疏矩阵的乘积满足约束等距性（RIP）条件：<img src="/2018/12/08/yasuoganzhi/图片11.png">；<br>②与稀疏基不相关，是信号恢复的保证；<br>③对硬件存储器的要求不能过高；<br>④不能因观测值的减少而丢失关键信息；<br>⑤采样的过程是非自适应的。<br>常见的测量矩阵：<br>① 高斯投影矩阵；<br>②贝努力随机矩阵；<br>③哈达玛矩阵；<br>④部分正交矩阵；<br>⑤随机托普利兹矩阵；<br>压缩感知流程图：<br><img src="/2018/12/08/yasuoganzhi/图片12.png"><br>所以需要求解的问题如下：<br><img src="/2018/12/08/yasuoganzhi/图片13.png" title="即求解一个欠定方程"></p>
+<h3 id="观测"><a href="#观测" class="headerlink" title="观测"></a>观测</h3><p>观测：通过将原信号X与测量矩阵相乘，就可以完成对信号采样，获得采样后的数据，这个过程称为观测，即压缩采样。<br><img src="/2018/12/08/yasuoganzhi/图片9.png"><br>测量矩阵关系到压缩效率，也直接关系到信号能否被精确重构。理想的测量矩阵具有如下要求：<br>①使测量矩阵与稀疏矩阵的乘积满足约束等距性（RIP）条件：<img src="/2018/12/08/yasuoganzhi/图片11.png"><br>②与稀疏基不相关，是信号恢复的保证；<br>③对硬件存储器的要求不能过高；<br>④不能因观测值的减少而丢失关键信息；<br>⑤采样的过程是非自适应的。<br>常见的测量矩阵：<br>① 高斯投影矩阵；<br>②贝努力随机矩阵；<br>③哈达玛矩阵；<br>④部分正交矩阵；<br>⑤随机托普利兹矩阵；<br>压缩感知流程图：<br><img src="/2018/12/08/yasuoganzhi/图片12.png"><br>所以需要求解的问题如下：<br><img src="/2018/12/08/yasuoganzhi/图片13.png" title="即求解一个欠定方程"></p>
 <h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h3><p>证明解的唯一性（Candes和陶）：<br><img src="/2018/12/08/yasuoganzhi/图片14.png"><br>求解问题：<br><img src="/2018/12/08/yasuoganzhi/图片15.png" title="显然这是一个NP难问题"><br>在一定条件，可转化为：（基追踪算法）<br><img src="/2018/12/08/yasuoganzhi/图片16.png"><br>除基追踪算法外，常用的重构算法还包括：<br>（1）匹配追踪算法：<br>（2）正交匹配追踪算法：<br>（3）分段正交匹配追踪算法：<br>（4）正则化正交匹配追踪算法：<br>（5）压缩采样匹配追踪算法：</p>
 <h3 id="压缩感知特点"><a href="#压缩感知特点" class="headerlink" title="压缩感知特点"></a>压缩感知特点</h3><p>优势：<br>（1）缩短压缩信号长度，甚至突破奈奎斯特采样定理的极限。<br>（2）抗干扰。压缩信号中任何一项都是重要的，或者说不重要的，丢失某几项，仍然可以完美重构。<br>缺点：<br>（1）完美重构时，压缩效果不太理想；<br>（2）重构算法是NP 问题。即使将0-范数转化为1-范数求解，复杂度仍然很高。</p>
 
