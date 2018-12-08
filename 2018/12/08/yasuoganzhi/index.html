@@ -88,19 +88,34 @@
 
 
 
-<meta name="description" content="传统压缩原理 压缩感知理论压缩感知仿真">
+<meta name="description" content="压缩感知理论压缩感知  压缩感知理论对信号的采样、压缩发生在同一个步骤，利用信号的稀疏性，以远低于Nyquist 采样率的速率对信号进行非自适应的测量。众所周知，在数学上，要解出几个未知数就要列出几个方程。用信号处理的方式来表述，就是如果要还原一个信号，信号有多大，我们就要至少测量多少数据。但这只是一般规律，用较少的测量数据还原出较多的信息。即求解欠定方程的唯一解，本来这是不可能的事情，但是如果事">
 <meta name="keywords" content="稀疏">
 <meta property="og:type" content="article">
 <meta property="og:title" content="压缩感知原理">
 <meta property="og:url" content="http://yoursite.com/2018/12/08/yasuoganzhi/index.html">
 <meta property="og:site_name" content="我是个好人">
-<meta property="og:description" content="传统压缩原理 压缩感知理论压缩感知仿真">
+<meta property="og:description" content="压缩感知理论压缩感知  压缩感知理论对信号的采样、压缩发生在同一个步骤，利用信号的稀疏性，以远低于Nyquist 采样率的速率对信号进行非自适应的测量。众所周知，在数学上，要解出几个未知数就要列出几个方程。用信号处理的方式来表述，就是如果要还原一个信号，信号有多大，我们就要至少测量多少数据。但这只是一般规律，用较少的测量数据还原出较多的信息。即求解欠定方程的唯一解，本来这是不可能的事情，但是如果事">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片1.png">
-<meta property="og:updated_time" content="2018-12-08T08:46:40.150Z">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片2.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片3.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片4.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片5.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片6.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片7.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片8.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片9.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片10.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片11.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片12.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片13.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片14.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片15.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片16.png">
+<meta property="og:updated_time" content="2018-12-08T09:25:56.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="压缩感知原理">
-<meta name="twitter:description" content="传统压缩原理 压缩感知理论压缩感知仿真">
+<meta name="twitter:description" content="压缩感知理论压缩感知  压缩感知理论对信号的采样、压缩发生在同一个步骤，利用信号的稀疏性，以远低于Nyquist 采样率的速率对信号进行非自适应的测量。众所周知，在数学上，要解出几个未知数就要列出几个方程。用信号处理的方式来表述，就是如果要还原一个信号，信号有多大，我们就要至少测量多少数据。但这只是一般规律，用较少的测量数据还原出较多的信息。即求解欠定方程的唯一解，本来这是不可能的事情，但是如果事">
 <meta name="twitter:image" content="http://yoursite.com/2018/12/08/yasuoganzhi/图片1.png">
 
 
@@ -378,8 +393,16 @@
       
 
       
-        <h2 id="传统压缩原理"><a href="#传统压缩原理" class="headerlink" title="传统压缩原理"></a>传统压缩原理</h2><img src="/2018/12/08/yasuoganzhi/图片1.png" title="哈哈">
-<h2 id="压缩感知理论"><a href="#压缩感知理论" class="headerlink" title="压缩感知理论"></a>压缩感知理论</h2><h2 id="压缩感知仿真"><a href="#压缩感知仿真" class="headerlink" title="压缩感知仿真"></a>压缩感知仿真</h2>
+        <h2 id="压缩感知理论"><a href="#压缩感知理论" class="headerlink" title="压缩感知理论"></a>压缩感知理论</h2><h3 id="压缩感知"><a href="#压缩感知" class="headerlink" title="压缩感知"></a>压缩感知</h3><img src="/2018/12/08/yasuoganzhi/图片1.png" title="发送端">
+<img src="/2018/12/08/yasuoganzhi/图片2.png" title="接收端">
+<p>压缩感知理论对信号的采样、压缩发生在同一个步骤，利用信号的稀疏性，以远低于Nyquist 采样率的速率对信号进行非自适应的测量。<br>众所周知，在数学上，要解出几个未知数就要列出几个方程。用信号处理的方式来表述，就是如果要还原一个信号，信号有多大，我们就要至少测量多少数据。<br>但这只是一般规律，用较少的测量数据还原出较多的信息。即求解欠定方程的唯一解，本来这是不可能的事情，但是如果事先假设信号有某些内部规律，那么有可能还原信号。</p>
+<h3 id="压缩感知的流程"><a href="#压缩感知的流程" class="headerlink" title="压缩感知的流程"></a>压缩感知的流程</h3><img src="/2018/12/08/yasuoganzhi/图片3.png">
+<p>即<img src="/2018/12/08/yasuoganzhi/图片4.png">，其中<img src="/2018/12/08/yasuoganzhi/图片5.png"></p>
+<h3 id="稀疏化"><a href="#稀疏化" class="headerlink" title="稀疏化"></a>稀疏化</h3><p>稀疏信号：指信号中大多数系数的值较小（等于或接近0），即非零值的个数很少，共K个，则称该信号的稀疏度为K，即K稀疏。<br><img src="/2018/12/08/yasuoganzhi/图片6.png"><br>信号的稀疏性是压缩感知的基础，但现实中并不是所有信号都是稀疏的，因此对于在时域不稀疏的信号，在压缩前需要将时域信号投影到另一个域上，使其在该投影域内满足稀疏性条件。<br><img src="/2018/12/08/yasuoganzhi/图片7.png"><br><img src="/2018/12/08/yasuoganzhi/图片8.png" title="只有选择合适的基表示信号，才能保证信号在某个域上表现最稀疏，这是保证信号以高概率重构的前提"><br>常见的稀疏变换：①离散傅立叶变换基、②离散余弦变换基、③离散正弦变换基、④小波矩阵、⑤冗余字典等</p>
+<h3 id="观测"><a href="#观测" class="headerlink" title="观测"></a>观测</h3><p>观测：通过将原信号X与测量矩阵相乘，就可以完成对信号采样，获得采样后的数据，这个过程称为观测，即压缩采样。<br><img src="/2018/12/08/yasuoganzhi/图片9.png"><br>测量矩阵关系到压缩效率，也直接关系到信号能否被精确重构。理想的测量矩阵具有如下要求：<br>①使<img src="/2018/12/08/yasuoganzhi/图片10.png">满足约束等距性（RIP）条件：<img src="/2018/12/08/yasuoganzhi/图片11.png">；<br>②与稀疏基不相关，是信号恢复的保证；<br>③对硬件存储器的要求不能过高；<br>④不能因观测值的减少而丢失关键信息；<br>⑤采样的过程是非自适应的。<br>常见的测量矩阵：<br>① 高斯投影矩阵；<br>②贝努力随机矩阵；<br>③哈达玛矩阵；<br>④部分正交矩阵；<br>⑤随机托普利兹矩阵；<br>压缩感知流程图：<br><img src="/2018/12/08/yasuoganzhi/图片12.png"><br>所以需要求解的问题如下：<br><img src="/2018/12/08/yasuoganzhi/图片13.png" title="即求解一个欠定方程"></p>
+<h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h3><p>证明解的唯一性（Candes和陶）：<br><img src="/2018/12/08/yasuoganzhi/图片14.png"><br>求解问题：<br><img src="/2018/12/08/yasuoganzhi/图片15.png" title="显然这是一个NP难问题"><br>在一定条件，可转化为：（基追踪算法）<br><img src="/2018/12/08/yasuoganzhi/图片16.png"><br>除基追踪算法外，常用的重构算法还包括：<br>匹配追踪算法：<br>正交匹配追踪算法：<br>分段正交匹配追踪算法：<br>正则化正交匹配追踪算法：<br>压缩采样匹配追踪算法：</p>
+<h3 id="压缩感知特点"><a href="#压缩感知特点" class="headerlink" title="压缩感知特点"></a>压缩感知特点</h3><p>优势：<br>缩短压缩信号长度，甚至突破奈奎斯特采样定理的极限。<br>抗干扰。压缩信号中任何一项都是重要的，或者说不重要的，丢失某几项，仍然可以完美重构。<br>缺点：<br>完美重构时，压缩效果不太理想；<br>重构算法是NP 问题。即使将0-范数转化为1-范数求解，复杂度仍然很高。</p>
+
       
     </div>
     
@@ -622,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#传统压缩原理"><span class="nav-number">1.</span> <span class="nav-text">传统压缩原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩感知理论"><span class="nav-number">2.</span> <span class="nav-text">压缩感知理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩感知仿真"><span class="nav-number">3.</span> <span class="nav-text">压缩感知仿真</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩感知理论"><span class="nav-number">1.</span> <span class="nav-text">压缩感知理论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩感知"><span class="nav-number">1.1.</span> <span class="nav-text">压缩感知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩感知的流程"><span class="nav-number">1.2.</span> <span class="nav-text">压缩感知的流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#稀疏化"><span class="nav-number">1.3.</span> <span class="nav-text">稀疏化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观测"><span class="nav-number">1.4.</span> <span class="nav-text">观测</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构"><span class="nav-number">1.5.</span> <span class="nav-text">重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#压缩感知特点"><span class="nav-number">1.6.</span> <span class="nav-text">压缩感知特点</span></a></li></ol></li></ol></div>
             
 
           </div>
